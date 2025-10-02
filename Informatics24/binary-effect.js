@@ -44,7 +44,7 @@ function animateBinaryToText(el, text, opts = {}) {
   });
 }
 document.addEventListener("DOMContentLoaded", () => {
-  // Home title → Hexadecimal
+  // Home title → Hexadecimal (keep this one)
   const homeEl = document.getElementById("binary-title");
   animateBinaryToText(homeEl, "Hello Friends", {
     base: 16,           // HEX
@@ -53,17 +53,20 @@ document.addEventListener("DOMContentLoaded", () => {
     revealDelay: 220
   });
 
-  // About title → Binary (when scrolled into view)
+  // About title → Fade in when scrolled
   const aboutEl = document.getElementById("about-title");
-  window.addEventListener("scroll", () => {
+
+  // Make sure the element starts hidden
+  aboutEl.classList.add("fade-in");
+
+  const onScroll = () => {
     const rect = aboutEl.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.8 && aboutEl.innerHTML === "") {
-      animateBinaryToText(aboutEl, "About", {
-        base: 2,          // BINARY
-        bitDelay: 80,
-        bitsPerCharDelay: 120,
-        revealDelay: 200
-      });
+    if (rect.top < window.innerHeight * 0.8) {
+      aboutEl.classList.add("show");
+      window.removeEventListener("scroll", onScroll); // only once
     }
-  });
+  };
+
+  window.addEventListener("scroll", onScroll);
+  onScroll(); // run once in case it's already visible
 });

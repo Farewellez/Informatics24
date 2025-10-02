@@ -87,54 +87,6 @@
     width: 100%;
 }
 /* for main page */
-/* home section */
-.hero {
-    height: 100vh;
-    display: flex;
-    color: white;
-    padding: 0 10%;
-    z-index: 1;
-}
-.hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    /* background-color: aliceblue; */
-    z-index: 1;
-    padding: 10px;
-}
-.hero-text {
-    flex: 1;
-    padding-left: 10%;
-}
-.hero-text h1 {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 4rem;
-    top: 55px;
-}
-.binary-title {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 3.2rem;
-    letter-spacing: 2px;
-    white-space: nowrap;
-    display: inline-block;
-    position: relative;
-}
-.binary-title::after {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 1.1rem;
-    background: #90C3C8;
-    margin-left: 6px;
-    vertical-align: middle;
-    animation: blink 1s steps(2, start) infinite;
-}
-@keyframes blink {
-    to {opacity: 0;}
-}
-/* small fade-in for final char */
 .binary-char {
     white-space: pre;
     display: inline-block;
@@ -146,42 +98,32 @@
   opacity: 1;
   transform: translateY(0);
 }
-.hero-text p {
-    font-size: 1.5rem;
-    text-align: justify;
-    margin-bottom: 10%;
-    padding-right: 5%;
-}
-.hero-image {
-    flex: 1;
-    display: flex;
-    padding: 10px, 0;
-    justify-content: center;
-    /* background-color: blue; */
-}
-.hero-image img {
-    max-width: 65%;
-    height: auto;
-    border-radius: 20px;
-}
-.btn {
-    display: inline-block;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 10px 20px;
-    margin-top: 40px;
-    background: #90C3C8;
-    color: #0d1117;
-    text-decoration: none;
-    border-radius: 80px;
-    font-weight: bold;
-    transition: 0.5s;
-}
-.btn:hover {
-    background: #006b6b;
-    color: white;
+/* Slice diagonal effect */
+.slice-card {
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
 }
 
-/* about section */
+/* Binary title animation (already in your CSS, keep it) */
+.binary-title {
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+}
+.binary-title::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 1.1rem;
+  background: #90C3C8;
+  margin-left: 6px;
+  vertical-align: middle;
+  animation: blink 1s steps(2, start) infinite;
+}
+@keyframes blink {
+  to { opacity: 0; }
+}
 .about {
     min-height: 100vh;
     display: flex;
@@ -190,7 +132,7 @@
     gap: 40px;
     flex-wrap: wrap;
     padding: 60px 10%;
-    background-color: rgba(17, 24, 39, 0.7); /* dark background (different from home) */
+    background-color: rgba(17, 24, 39, 1); /* dark background (different from home) */
     color: white;
     z-index: 1;
 }
@@ -232,4 +174,14 @@
     font-size: 1rem;
     line-height: 1.5;
     color: #d1d5db;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px); /* slight slide effect */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }

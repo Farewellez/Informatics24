@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<html>
+  <head>
+    <title>FarewellEz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+  <div id="particles-js"></div>
+  <!-- for navigation bar -->
+  <nav class="relative top-[50px] w-full h-[10%] z-20 flex justify-center items-center bg-transparent">
+    <!-- username -->
+    <div class="relative text-center -mt-[1%]">
+      <p class="font-bold text-white text-[20px] font-size hover:text-cyan-300 transition duration-500"><a href="https://github.com/Farewellez" target="_blank">Farewellez</a></p>
+    </div>
+    <!-- nav link -->
+    <div class="relative w-[400px] h-[50px] rounded-[30px] top-[5px] ml-[55%] -mt-[1%] text-center leading-[50px]">
+      <ul class="flex justify-center gap-[120px] text-white">
+        <li><a href="#home" 
+          class="relative text-white text-[20px] font-bold font-sans
+                  after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[3px]
+                  after:bg-[#0F828C] after:transition-all after:duration-300
+                  hover:after:w-full
+                  [&.active-nav]:after:w-full">
+          Home</a></li>
+        <li><a href="#about" class="relative text-white text-[20px] font-bold font-sans
+                  after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[3px]
+                  after:bg-[#0F828C] after:transition-all after:duration-300
+                  hover:after:w-full
+                  [&.active-nav]:after:w-full"
+          >About</a></li>
+        <li><a href="#project" class="relative text-white text-[20px] font-bold font-sans
+                  after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[3px]
+                  after:bg-[#0F828C] after:transition-all after:duration-300
+                  hover:after:w-full
+                  [&.active-nav]:after:w-full"
+          >Project</a></li>
+        <li><a href="#contact" class="relative text-white text-[20px] font-bold font-sans
+                  after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[3px]
+                  after:bg-[#0F828C] after:transition-all after:duration-300
+                  hover:after:w-full
+                  [&.active-nav]:after:w-full"
+          >Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- for main content :) -->
+  <main>
+    <!-- for home -->
+    <section id="home" class="h-screen flex text-white px-[10%] relative z-10">
+      <div class="flex items-center justify-between w-full p-2.5">
+        <div class="flex-1 pl-[10%] pt-[3%]">
+          <h1 id="binary-title" aria-live="polite" 
+          class="font-mono text-[3.2rem] tracking-[2px] whitespace-nowrap inline-block relative" class="font-mono text-5xl relative top-[55px]"
+          class="relative after:content-[''] after:inline-block after:w-[10px] after:h-[1.1rem] after:bg-cyan-300 after:ml-[6px] after:align-middle after:animate-pulse">
+          Hello Friends</h1>
+          <p class="text-xl text-justify mb-[10%] pr-[5%]">
+            Hello friends, welcome to my portfolio website. I don't really have any interest in development, but building something isn't that bad. Sometimes building software is fun, so I enjoy it. <br> <br>
+            I have an interest in cybersecurity. I'm a CTF player, and I feel my passion and talent lie in this field. Some of the categories I've explored include web exploitation, reverse engineering, and binary exploitation. I enjoy analyzing and finding system vulnerabilities, but I'm honestly lazy about building systems.
+            <br><br>I love sharing knowledge, so I'll make this portfolio website full of things related to cybersecurity. I'll also list some of the projects and events I've participated in.
+            <br><a href="#about" 
+            class="inline-block font-mono px-5 py-2.5 mt-10 bg-cyan-300 text-gray-900 rounded-full font-bold transition duration-500 hover:bg-cyan-700 hover:text-white">
+            Learn More</a>
+          </p>
+        </div>
+        <div class="flex-1 flex justify-center py-2.5">
+          <img src="kurumi.jpg" class="max-w-[70%] h-auto rounded-2xl pt-[5%]" alt="My">
+        </div>
+      </div>
+    </section>
+    <!-- end of home section -->
+    <!-- for about section -->
+    <section id="about" class="about flex items-center justify-between px-[1%] gap-15">
+  
+  <!-- Left side: stacked slices -->
+  <div class="flex flex-col gap-2 w-1/2 -ml-20">
+    <!-- CS -->
+    <div class="relative w-full h-60 overflow-hidden transform -skew-x-12 group">
+      <img src="CS-Event.png" alt="Cybersecurity" 
+           class="w-full h-full scale-80 object-[center_20%] object-cover transform skew-x-6 transition-transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-black/50 flex items-center justify-center text-cyan-300 text-xl md:text-5xl  font-bold opacity-0 group-hover:opacity-100 transition">
+        Cybersecurity
+      </div>
+    </div>
+
+    <!-- CTF -->
+    <div class="relative w-full h-60 overflow-hidden transform -skew-x-12 group">
+      <img src="CTF.png" alt="CTF" 
+           class="w-full h-full scale-80 object-[center_3%] object-cover transform skew-x-6 transition-transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-black/50 flex items-center justify-center text-cyan-300 text-xl md:text-5xl font-bold opacity-0 group-hover:opacity-100 transition">
+        Capture The Flag
+      </div>
+    </div>
+
+    <!-- CPC -->
+    <div class="relative w-full h-60 overflow-hidden transform -skew-x-12 group">
+      <img src="CS-News.png" alt="CPC" 
+           class="w-full h-full scale-80 object-[center_5%] object-cover transform skew-x-6 transition-transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-black/50 flex items-center justify-center text-cyan-300 text-xl md:text-5xl font-bold opacity-0 group-hover:opacity-100 transition">
+        Competitive Programming
+      </div>
+    </div>
+  </div>
+
+  <!-- Right side: Title + text -->
+  <div class="flex-1 text-right">
+    <h2 id="about-title" class="fade-in mb-10 text-6xl md:text-7xl font-[Orbitron] tracking-widest leading-tight">About My Interest</h2>
+    <p class="text-gray-300 leading-relaxed text-lg  ml-20 text-right">
+      My technical journey is built on three strong pillars. I am dedicated to <span class="text-cyan-400 font-semibold">Cybersecurity</span>, 
+      continuously challenging my skills through practical application in <span class="text-cyan-400 font-semibold">CTF Competitions</span>. 
+      This hands-on security focus is deeply supported by my commitment to <span class="text-cyan-400 font-semibold">Competitive Programming</span>, 
+      which ensures I have strong algorithmic thinking and the ability to write efficient, high-quality code
+    </p>
+  </div>
+</section> 
+  <section id="project" class="py-20 px-[10%] bg-gray-900 bg-opacity-10 min-h-screen">
+    <h2 class="text-4xl md:text-5xl font-[Orbitron] tracking-widest text-center mb-12 text-cyan-400">
+      Projects
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Project 1 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden group">
+        <img src="coming-soon.png" alt="Project 1" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-cyan-300 mb-2">Portfolio Website</h3>
+          <p class="text-gray-400 mb-4">My personal website built with Tailwind, featuring animations and responsive design.</p>
+          <a href="#" class="text-cyan-400 hover:underline">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden group">
+        <img src="coming-soon.png" alt="Project 2" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-cyan-300 mb-2">CTF Challenge</h3>
+          <p class="text-gray-400 mb-4">A Capture The Flag challenge platform I built during cybersecurity study.</p>
+          <a href="#" class="text-cyan-400 hover:underline">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden group">
+        <img src="coming-soon.png" alt="Project 3" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-cyan-300 mb-2">Algorithm Visualizer</h3>
+          <p class="text-gray-400 mb-4">A small web app that visualizes sorting/searching algorithms for learning.</p>
+          <a href="#" class="text-cyan-400 hover:underline">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden group">
+        <img src="coming-soon.png" alt="Project 3" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-cyan-300 mb-2">Algorithm Visualizer</h3>
+          <p class="text-gray-400 mb-4">A small web app that visualizes sorting/searching algorithms for learning.</p>
+          <a href="#" class="text-cyan-400 hover:underline">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden group">
+        <img src="coming-soon.png" alt="Project 3" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-cyan-300 mb-2">Algorithm Visualizer</h3>
+          <p class="text-gray-400 mb-4">A small web app that visualizes sorting/searching algorithms for learning.</p>
+          <a href="#" class="text-cyan-400 hover:underline">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden group">
+        <img src="coming-soon.png" alt="Project 3" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-cyan-300 mb-2">Algorithm Visualizer</h3>
+          <p class="text-gray-400 mb-4">A small web app that visualizes sorting/searching algorithms for learning.</p>
+          <a href="#" class="text-cyan-400 hover:underline">View Project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+    <section id="contact" class="py-20 px-[10%] bg-black">
+  <h2 class="text-4xl md:text-5xl font-[Orbitron] tracking-widest text-center mb-12 text-cyan-400">
+    Contact Me
+  </h2>
+
+  <div class="max-w-2xl mx-auto">
+    <form class="space-y-6">
+      <div>
+        <label class="block text-gray-300 mb-2">Name</label>
+        <input type="text" class="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-cyan-400 outline-none">
+      </div>
+
+      <div>
+        <label class="block text-gray-300 mb-2">Email</label>
+        <input type="email" class="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-cyan-400 outline-none">
+      </div>
+
+      <div>
+        <label class="block text-gray-300 mb-2">Message</label>
+        <textarea rows="4" class="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-cyan-400 outline-none"></textarea>
+      </div>
+
+      <button type="submit" class="w-full py-3 bg-cyan-400 text-black font-bold rounded-lg hover:bg-cyan-300 transition">
+        Send Message
+      </button>
+    </form>
+
+    <!-- Social links -->
+    <div class="flex justify-center space-x-6 mt-10">
+      <a href="https://github.com/Farewellez" class="text-cyan-400 hover:text-cyan-300">GitHub</a>
+      <a href="https://id.linkedin.com/in/ahmadzafarell" class="text-cyan-400 hover:text-cyan-300">LinkedIn</a>
+      <a href="https://www.instagram.com/farewell.elf?igsh=NDZ5ZTJ6cTAweTdi" class="text-cyan-400 hover:text-cyan-300">Instagram</a>
+    </div>
+  </div>
+</section>
+
+  </main>
+  </body>
+</html>
+
+<!-- for Script JS -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="app.js"></script>
+<script src="nav-effect.js"></script>
+<script src="binary-effect.js"></script>
+<script src="transition.js"></script>
